@@ -7,6 +7,7 @@ import Testimonial from './Components/Testimonial'
 import Contact from './Components/Contact'
 import Header from './Components/Header'
 import UpButton from './Components/UpButton'
+import FollowMe from './Components/FollowMe'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
     <Testimonial />
     <Contact />
     <UpButton />
+    <FollowMe />
     </>
   )
 }
