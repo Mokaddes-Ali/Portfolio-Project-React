@@ -200,7 +200,7 @@
 
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { useEffect , useState } from "react";
+import { useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { FaLaravel, FaReact, FaJs, FaPhp } from "react-icons/fa";
 import { slideUpVariants, zoomInVariants } from './animation';
@@ -208,7 +208,7 @@ import { useMotionTemplate, useMotionValue, motion, animate } from "framer-motio
 import { Link } from 'react-scroll';
 import heroImage from '../assets/Images/22-removebg-preview.png';
 import Typewriter from './Typewriter';
-
+import { FaLaptopCode } from "react-icons/fa";
 
 
 const techIcons = [
@@ -294,25 +294,22 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-white text-xl lg:text-lg text-center lg:text-left"
           >
-            I build user-friendly websites and applications with a focus on clean and efficient code using React and Laravel.
+            I build user-friendly websites and applications with a focus on clean and efficient code using React and Laravel and other powerful tools.
           </motion.p>
 
           {/* Buttons */}
           <div className="flex gap-4 mt-6">
-
-          <motion.button
-    initial="hidden"
-    whileInView="visible"
-    variants={zoomInVariants}
-    style={{ border, boxShadow }}
-    whileHover={{ scale: 1.015 }}
-    whileTap={{ scale: 0.985 }}
-    className="group relative flex items-center gap-1.5 rounded-full bg-gray-950/10 px-6 py-3 text-gray-50 transition-colors hover:bg-gray-950/50"
+  <motion.div
+    initial={{ opacity: 0, scale: 0.5, rotate: -45 }}
+    animate={{ opacity: 1, scale: 1, rotate: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    whileHover={{ scale: 1.2, rotate: 10 }}
+    className="p-4 rounded-full bg-gray-800 shadow-xl"
   >
-    <Link to="contact" spy={true} offset={-100} smooth={true}>Book Now</Link>
-    <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
-  </motion.button>
-          </div>
+    <FaLaptopCode className="text-blue-500 text-5xl" />
+  </motion.div>
+</div>
+
         </motion.div>
 
         {/* Right Side (Image & Circles) */}
